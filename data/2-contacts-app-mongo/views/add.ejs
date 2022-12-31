@@ -1,0 +1,32 @@
+<div class="container my-5 d-flex justify-content-center items-center">
+  <div class="row">
+    <div class="col-md">
+      <% if(typeof errors != 'undefined') { %>
+      <div class="alert alert-danger" id="msg" role="alert">
+        <ul>
+          <% errors.forEach(error => { %>
+          <li><%= error.msg %></li>
+          <% }) %>
+        </ul>
+      </div>
+      <% } %>
+
+      <form action="/contacts" method="post">
+        <legend>Tambahkan Data Baru</legend>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username :</label>
+          <input type="text" id="username" name="nama" class="form-control" placeholder="Masukan Username Anda" />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email :</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Masukan Email Anda" />
+        </div>
+        <div class="mb-3">
+          <label for="telp" class="form-label">No Telepon :</label>
+          <input type="telp" id="telp" name="telp" class="form-control" placeholder="Masukan Nomor Telepon" />
+        </div>
+        <button type="submit" class="btn btn-primary">Kirim</button>
+      </form>
+    </div>
+  </div>
+</div>

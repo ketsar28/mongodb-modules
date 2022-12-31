@@ -1,0 +1,8 @@
+<!-- pengulangan -->
+<h1 class="text-light fw-bold">Data Mahasiswa :</h1>
+<% mahasiswa.forEach(mhs => { %>
+<ul>
+  <li class="text-light">Nama : <%= mhs.nama %></li>
+  <li class="text-light">Prodi :<%= mhs.prodi %></li>
+</ul>
+<% }) %>
